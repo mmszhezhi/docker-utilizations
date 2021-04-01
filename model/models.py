@@ -9,10 +9,10 @@ from sklearn.preprocessing import MinMaxScaler
 import sys
 
 offset = 15000
-path = "D:\d\pytorch-repo\seqencelstm\model1"
+path = "D:\d\pytorch-repo\docker-utilizations\model1"
 
 
-df  = pd.read_csv("data.csv",index_col=0)
+df  = pd.read_csv("data.csv", index_col=0)
 scaler = MinMaxScaler(feature_range=(-1, 1))
 
 

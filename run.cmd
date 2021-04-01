@@ -1,0 +1,1 @@
+D:\envs\mini\Scripts\python.exe D:/d/pytorch-repo/docker-utilization/model-service.py
