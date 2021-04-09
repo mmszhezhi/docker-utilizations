@@ -28,8 +28,10 @@ def read_root():
 
 @app.post("/predict")
 def read_item(item:Item):
+    x = np.array(item.data).reshape([-1, 2])
 
-    x = torch.FloatTensor(np.array(item.data).reshape([-1,2])[np.newaxis,:,:])
+    x = torch.FloatTensor(scaler.transform(x)[np.newaxis,:,:])
+
     with torch.no_grad():
         predict = model(x)
     pre = scaler.inverse_transform(predict)

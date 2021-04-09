@@ -1,4 +1,5 @@
-from dockerutilizations.model.models import *
+
+from model.models import *
 offset = 15000
 train_data_normalized = scaler.fit_transform(df.values[15000:, :])
 

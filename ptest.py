@@ -5,7 +5,7 @@ import pandas as pd
 import random
 
 df = pd.read_csv("data.csv")
-start = random.randint(0,58456-250)
+start = random.randint(2555,58456-250)
 
 data=df.loc[start:start+149,['cpu','mem']]
 
@@ -13,7 +13,8 @@ params={
     "data": data.values.tolist(),
 }
 
-url='http://else.so:8079/predict'
+url='http://else.so:9319/predict'
+url='http://127.0.0.1:9081/predict'
 
 time1=time.time()
 html = requests.post(url, json.dumps(params))
